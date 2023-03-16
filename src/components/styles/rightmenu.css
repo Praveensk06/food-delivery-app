@@ -1,0 +1,283 @@
+.right-menu {
+  width: 350px;
+  height: calc(100% - 60px);
+  background-color: #fff;
+  position: fixed;
+  right: 0;
+  top: 60px;
+  z-index: 105;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20px 10px;
+  transform: translateX(200%);
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  box-shadow: 0px 3px 20px rgba(0, 0, 0, 0.1);
+}
+
+.right-menu.activated {
+  transform: translateX(0%);
+}
+
+.debit-card-container {
+  padding: 10px;
+  width: 100%;
+  height: auto;
+}
+.debit-card {
+  position: relative;
+  width: 100%;
+  height: 170px;
+  min-width: 300px;
+  min-height: 170px;
+  border-radius: 15px;
+}
+
+.debit-card::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f8901c;
+  transform: rotate(5deg);
+  border-radius: 15px;
+  filter: blur(2px);
+  z-index: -2;
+}
+
+.debit-card::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: linear-gradient(
+    35deg,
+    rgba(255, 255, 255, 0.3),
+    rgba(255, 255, 255, 0.1)
+  );
+  backdrop-filter: blur(10px);
+  z-index: -1;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
+}
+
+.card-group {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+}
+
+.card-logo,
+.card-chip,
+.card-name,
+.card-number,
+.card-from,
+.card-to,
+.card-ring {
+  position: absolute;
+}
+
+.card-logo {
+  width: 60px;
+  top: 30px;
+  right: 30px;
+  height: auto;
+}
+
+.card-chip {
+  width: 40px;
+  height: auto;
+  top: 50px;
+  left: 30px;
+}
+
+.card-number,
+.card-name,
+.card-to,
+.card-from {
+  color: #fff;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+.card-number {
+  left: 30px;
+  bottom: 60px;
+}
+.card-name {
+  font-size: 21px;
+  bottom: 30px;
+  left: 30px;
+}
+
+.card-from {
+  font-size: 12px;
+  bottom: 30px;
+  right: 90px;
+}
+.card-to {
+  bottom: 30px;
+  right: 30px;
+  font-size: 12px;
+}
+.card-ring {
+  height: 400px;
+  width: 400px;
+  border-radius: 100vw;
+  background: transparent;
+  border: 50px solid rgba(0, 0, 0, 0.1);
+  top: -250px;
+  right: -250px;
+  box-sizing: border-box;
+}
+
+.card-ring::after {
+  position: absolute;
+  content: "";
+  height: 500px;
+  width: 500px;
+  border-radius: 100vw;
+  background: transparent;
+  border: 50px solid rgba(0, 0, 0, 0.1);
+  top: -415px;
+  right: -155px;
+  box-sizing: border-box;
+}
+
+/* cart items */
+
+.cart-checkout-container {
+  width: 100%;
+  min-width: 320px;
+}
+.cart-container {
+  width: 100%;
+  min-height: 190px;
+  max-height: 180px;
+  margin-top: 10px;
+  overflow-x: scroll;
+  overflow-x: hidden;
+}
+
+.cart-container::-webkit-scrollbar {
+  display: none;
+}
+.cart-item {
+  display: flex;
+  align-items: center;
+  margin: 8px 0;
+}
+
+.cart-item .img-box {
+  width: 60px;
+  min-width: 60px;
+  height: 60px;
+  min-height: 60px;
+  background: #00ffc855;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 5px;
+}
+
+.cart-item .img-box img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.cart-item .item-section {
+  margin-left: 10px;
+}
+
+.cart-item .item-section .item-name {
+  font-size: 16px;
+  color: #2a2b3c;
+}
+
+.item-section .item-quantity {
+  font-size: 16px;
+  color: #2a2b3c;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 150px;
+}
+
+.item-quantity span {
+  color: #f8901c;
+}
+
+.item-quantity .quantity {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 60px;
+  cursor: pointer;
+}
+
+.item-remove,
+.item-add {
+  color: #2a2b3c;
+  font-size: 24px;
+}
+
+.item-price {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2a2b3c;
+  margin-left: auto;
+}
+
+.dolar-sign {
+  font-size: 12px;
+  color: #f8901c;
+}
+
+.item-price-value {
+  font-size: 16px;
+  color: #373849;
+}
+
+.total-section {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 5px 8px;
+  margin: 15px 0px;
+}
+
+.total-section h3 {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2a2b3c;
+}
+
+.total-section p {
+  font-size: 18px;
+  font-weight: 600;
+  color: #2a2b3c;
+}
+
+.total-section p span {
+  font-size: 14px;
+  color: #f8901c;
+}
+.check-out {
+  outline: none;
+  border: none;
+  width: 100%;
+  padding: 10px 20px;
+  background: #f8901c;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  border-radius: 25px;
+}

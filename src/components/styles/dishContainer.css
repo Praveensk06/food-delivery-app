@@ -1,0 +1,48 @@
+.dish-container {
+  width: 100%;
+  padding: 10px 0;
+}
+.menu-card {
+  width: 100%;
+}
+.sub-menu-container,
+.view-all {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.sub-menu-container h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #2a2b3c;
+}
+
+.view-all p {
+  font-size: 12px;
+  color: #f8901c;
+  font-weight: 400;
+}
+
+.view-all i {
+  background-color: #f8901c;
+  width: 10px;
+  height: 20px;
+  min-width: 20px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 10px;
+}
+
+.arrow {
+  font-size: 16px;
+  color: #faf9fb;
+}
+
+@media screen and (min-width: 950px) {
+  .dish-container {
+    width: calc(100%-350px);
+  }
+}
