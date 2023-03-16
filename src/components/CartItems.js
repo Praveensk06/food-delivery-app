@@ -24,10 +24,10 @@ const CartItems = ({ imgSrc, name, price, itemId }) => {
 
   // updateQuantity that takes an action (add/remove) and an item ID as arguments
   const updateQuantity = (action, id) => {
-    if (action == "add") {
+    if (action === "add") {
       setQty(qty + 1);
     } else {
-      if (qty == 1) cartItems.pop(id);
+      if (qty === 1) cartItems.pop(id);
       dispatch({
         type: actionType.SET_CART,
         cart: cartItems,

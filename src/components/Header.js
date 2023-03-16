@@ -18,7 +18,7 @@ const Header = () => {
         rightMenu.classList.remove("activated");
       }, 5000);
     });
-  }, []);
+  });
 
   return (
     <header>

@@ -33,6 +33,10 @@
   background: #f8901c;
 }
 
+.row-menu-card.active {
+  background: #f8901c;
+}
+
 .row-menu-card .img-box {
   width: 40px;
   min-width: 40px;

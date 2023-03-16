@@ -16,7 +16,7 @@ import { useStateValue } from "./components/styles/StateProvider";
 const App = () => {
   // main dish state variable
   const [mainData, setMainData] = useState(
-    Items.filter((element) => element.itemId == "buger01")
+    Items.filter((element) => element.itemId === "buger01")
   );
 
   const [{ cart }, dispatch] = useStateValue();
@@ -37,11 +37,11 @@ const App = () => {
       .querySelector(".row-container")
       .querySelectorAll(".row-menu-card");
 
-    function setMenuActive() {
+    function menuActive() {
       menuCards.forEach((n) => n.classList.remove("active"));
       this.classList.add("active");
     }
-    menuCards.forEach((n) => n.addEventListener("click", setMenuActive));
+    menuCards.forEach((n) => n.addEventListener("click", menuActive));
   }, [mainData, cart]);
 
   // set main dish items on filter passed item id
@@ -79,7 +79,7 @@ const App = () => {
                     <MenuCard
                       name={data.name}
                       imgSrc={data.imgSrc}
-                      isActive={data.itemId === "buger01" ? true : false}
+                      isActive={data.id === "1" ? true : false}
                     />
                   </div>
                 ))}
